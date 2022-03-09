@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+         <!-- Bootstrap Font Icon CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script>
+          function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+              elmnt = z[i];
+              /*search for elements with a certain atrribute:*/
+              file = elmnt.getAttribute("include-html");
+              if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                  if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    /*remove the attribute, and call this function once more:*/
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                  }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+              }
+            }
+          };
+        </script>
+    </head>
+
+    <body>
+        <div class="p-5 bg-image" 
+            style="background-image: url(Photo/71769818_10156942936463495_9106155120852205568_o.jpg); 
+                    background-attachment: fixed;
+                    background-size: cover;
+                    background-position: center;
+                    height: 300px;">
+            <div class="row">
+                <div class="col-sm"><img class="float-start" src="Photo/FICT Logo with border.png" width="360px"></div>
+            </div>
+        </div>
+
+        <nav class="navbar sticky-top px-3 justify-content-end" style="background-color: #9400d3;">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#scrollspyHeading1">入学优惠价</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#scrollspyHeading2">奖学金</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#scrollspyHeading3">联系服务</a>
+            </li>
+            <li class="nav-item">
+              <a href="landingpageEng.html" class="px-3"><span class="bi-translate" style="font-size: 1.5rem; color: white;"></span></a>
+            </li>
+          </ul>
+        </nav>
+
+        <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" class="scrollspy" tabindex="0" style="background-color: #ecd8e9;">
+          
+          <div class="container-fluid p-5">
+            <h1 id="scrollspyHeading1" class="text-center">入学优惠价</h1>
+            <div class="row py-2 text-black">
+
+                <div class="col-sm-4 py-3">
+                  <div class="card p-3" style="height: 480px;">
+                    <div class="col-md">
+                        <img src="Photo/DSC00963 copy (1).jpg" style="max-width: 100%;" >
+                    </div>
+                    <div class="col-md">
+                        <div class="card-body">
+                            <h4 class="card-title">新生入学优惠</h4>
+                            <div class="card-text text-center py-4"><h1>RM3000</h1><span class="badge bg-info" style="font-size: 1.5em;">学费减免</span></div>  
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 py-3">
+                    <div class="card p-3" style="height: 480px;">
+                        <div class="col-md">
+                            <img src="Photo/DSC00963 copy (1).jpg" style="max-width: 100%;" >
+                        </div>
+                        <div class="col-md">
+                            <div class="card-body">
+                                <h4 class="card-title">教育展优惠劵</h4>
+                                <div class="card-text text-center py-4"><h1>RM1000</h1><span class="badge bg-info" style="font-size: 1.5em;">学费减免</span></div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 py-3">
+                    <div class="card p-3" style="height: 480px;">
+                        <div class="col-md">
+                            <img src="Photo/DSC00963 copy (1).jpg" style="max-width: 100%;" >
+                        </div>
+                        <div class="col-md">
+                            <div class="card-body">
+                                <h4 class="card-title">杂费减免优惠</h4>
+                                <p class="card-text">申请资格</p>
+                                <ul>
+                                  <li>STPM / A Level <span class="badge bg-info" style="font-size: .8em;">2Bs</span></li>
+                                  <li>UEC <span class="badge bg-info" style="font-size: .8em;">5科积分为16-18分</span></li>
+                                  <li>SPM / O Level / IGCSE <span class="badge bg-info" style="font-size: .8em;">4As - 6As</span></li>
+                                </ul>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row py-3 text-black">
+                <div class="col-sm">
+                    <div class="card p-3" style="height: 100%;">
+                      <div class="row align-items-center">
+                          <div class="col-md-4">
+                              <img src="Photo/DSC00963 copy (1).jpg" class="my-auto d-block" style="max-width: 100%;" >
+                          </div>
+                          <div class="col-md-8">
+                              <div class="card-body">
+                                  <h4 class="card-title">提前缴费优惠</h4>
+                                  <table class="table table-bordered">
+                                      <tbody>
+                                          <tr>
+                                              <td><h5>提前缴付1年的学杂费</h5> <p><small>(必须在2022年1月17日以前提前缴费)</small></p></td>
+                                              <td class="text-center"><h4>RM 2000</h4>学费减免</td>
+                                          </tr>
+                                          <tr>
+                                              <td><h5>提前缴付第一年期的学杂费</h5><p><small>(必须在2022年1月17日以前提前缴费)</small></p></td>
+                                              <td class="text-center">电子表&IoT Robotic Training Kit <h4><span class="badge bg-info">价值不超过RM700</span></h4></td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                                </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-3 text-black">
+                <div class="col-sm">
+                    <div class="card p-3" style="height: 100%;">
+                      <div class="row align-items-center">
+                          <div class="col-md-4">
+                              <img src="Photo/DSC00963 copy (1).jpg" style="max-width: 100%;" >
+                          </div>
+                          <div class="col-md-8">
+                              <div class="card-body">
+                                  <h4 class="card-title">PTPTN Scheme</h4>
+                                  <h3><span class="badge bg-info">学费减免 RM3000</span> + <span class="badge bg-info">PTPTN SCHEME</span></h3>
+                                  <p>例子: 软件工程(荣誉)学士课程</p>
+                                  <table class="table">
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row-sm-1"></th>
+                                        <td>报名费+学杂费</td>
+                                        <td>RM 40,800</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row-sm-4"> - </th>
+                                        <td>新生入学优惠</td>
+                                        <td>RM 3,000</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row-sm-6"> - </th>
+                                        <td>PTPTN货款额</td>
+                                        <td>RM 30,600</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row" class="table-info"></th>
+                                        <td class="table-info"><strong>家庭仅需承担</strong></td>
+                                        <td class="table-info"><strong>RM 7,200</strong></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="container-fluid p-5">
+            <h1 id="scrollspyHeading2" class="py-5 text-center">奖学金</h1>
+            <div class="accordion accordion-flush text-black" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading01">
+                  <button class="accordion-button collapsed text-white" style="background-color: #9873b9;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse01" aria-expanded="false" aria-controls="flush-collapse01">
+                      <b>学优生</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse01" class="accordion-collapse collapse show" aria-labelledby="flush-heading01" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <div class="row">
+                          <div class="col-md-4 p-3"><img src="Photo/DSC00963 copy (1).jpg" width="100%"></div>
+                          <div class="col-md-8 p-3">
+                            <p>在高中里获得优秀成绩的学生, 欢迎来申请'学优生'奖学金。您以符合本校的申请资格，您会获得学费减免和优惠</p>
+                              <h2>申请资格</h2>
+                              <ul>
+                                  <li style="font-size: 1.1em;">STPM / A Level <span class="badge bg-info" style="font-size: .8em;">3Bs</span></li>
+                                  <li style="font-size: 1.1em;">UEC <span class="badge bg-info" style="font-size: .8em;">5科积分为15分或以下</span></li>
+                                  <li style="font-size: 1.1em;">SPM / O Level / IGCSE <span class="badge bg-info" style="font-size: .8em;">7As - 8As</span></li>
+                              </ul>
+
+                              <h2>课程</h2>
+                              <div class="row row-cols-1 row-cols-md-3 g-4">
+                                  <div class="col">
+                                    <div class="card" style="background-color: #ecd8e9;">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Foundation</h5>
+                                        <div class="card-text pt-3 text-center">学费减免高达<h4>RM 6,000</h4><h2><span class="badge bg-info">平均85%</span></h2></div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col">
+                                    <div class="card" style="background-color: #ecd8e9;">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Diploma</h5>
+                                        <div class="card-text pt-3 text-center">学费减免高达<h4>RM 15,000</h4><h2><span class="badge bg-info">平均85%</span></h2></div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col">
+                                    <div class="card" style="background-color: #ecd8e9;">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Degree</h5>
+                                        <div class="card-text pt-3 text-center">学费减免高达<h4>RM 30,000</h4><h2><span class="badge bg-info">平均85%</span></h2></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading02">
+                  <button class="accordion-button collapsed text-white" style="background-color: #9873b9;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse02" aria-expanded="false" aria-controls="flush-collapse02">
+                      <b>卓越学术表现</b> 
+                  </button>
+                </h2>
+                <div id="flush-collapse02" class="accordion-collapse collapse" aria-labelledby="flush-heading02" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <div class="row">
+                          <div class="col-md-4 p-3"><img src="Photo/DSC00963 copy (1).jpg" width="100%"></div>
+                          <div class="col-md-8 p-3">
+                            <h1>100% <span class="badge bg-info">学费</span> + <span class="badge bg-info">杂费</span> + <span class="badge bg-info">宿舍费</span> 全免</h1>
+                            <h2>申请资格</h2>
+                              <ul>
+                                <li style="font-size: 1.1em;">STPM / A Level <span class="badge bg-info" style="font-size: .8em;">3As</span></li>
+                                <li style="font-size: 1.1em;">UEC <span class="badge bg-info" style="font-size: .8em;">7As</span></li>
+                                <li style="font-size: 1.1em;">SPM / O Level / IGCSE <span class="badge bg-info" style="font-size: .8em;">9As</span></li>
+                              </ul>
+
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading03">
+                    <button class="accordion-button collapsed text-white" style="background-color: #9873b9;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse03" aria-expanded="false" aria-controls="flush-collapse03">
+                      <b>独中校长推荐</b>
+                    </button>
+                  </h2>
+                  <div id="flush-collapse03" class="accordion-collapse collapse" aria-labelledby="flush-heading03" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-4 p-3"><img src="Photo/DSC00963 copy (1).jpg" width="100%"></div>
+                            <div class="col-md-8 p-3">
+                              <h2>申请资格</h2>
+                              <ul>
+                                  <li>STPM / A Level <span class="badge bg-info" style="font-size: .8em;">3As</span></li>
+                                  <li>UEC <span class="badge bg-info" style="font-size: .8em;">7As</span></li>
+                                  <li>SPM / O Level / IGCSE <span class="badge bg-info" style="font-size: .8em;">9As</span></li>
+                              </ul>
+
+                              <h2>课程</h2>
+                              <div class="row g-4">
+                                  <div class="col-sm-6">
+                                    <div class="card" style="background-color: #ecd8e9;">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Degree</h5>
+                                        <div class="card-text text-center">学费减免高达<h4>RM 30,000</h4><h2><span class="badge bg-info">平均85%</span></h2></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading04">
+                    <button class="accordion-button collapsed text-white" style="background-color: #9873b9;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse04" aria-expanded="false" aria-controls="flush-collapse04">
+                      <b>才艺优秀生</b>
+                    </button>
+                  </h2>
+                  <div id="flush-collapse04" class="accordion-collapse collapse" aria-labelledby="flush-heading04" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-4 p-3"><img src="Photo/DSC00963 copy (1).jpg" width="100%"></div>
+                            <div class="col-md-8 p-3">
+                              <h2>申请资格</h2>
+                              <ul>
+                                <li><p style="font-size: 1.1em;">凭戏剧或影像类作品申请</p</li>
+                                <li><p style="font-size: 1.1em;">只限报读 <span class="badge bg-info">戏影系</span> 学生</p></li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading05">
+                    <button class="accordion-button collapsed text-white" style="background-color: #9873b9;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse05" aria-expanded="false" aria-controls="flush-collapse05">
+                      <b>多元文化</b>
+                    </button>
+                  </h2>
+                  <div id="flush-collapse05" class="accordion-collapse collapse" aria-labelledby="flush-heading05" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-4 p-3"><img src="Photo/DSC00963 copy (1).jpg" width="100%"></div>
+                            <div class="col-md-8 p-3">
+                              <h2>申请资格 <span class="badge bg-warning">非华裔学生(Non-Chinese Students)</span></h2>
+                              <ul>
+                                  <li>STPM / A Level <span class="badge bg-info" style="font-size: .8em;">3As</span></li>
+                                  <li>UEC <span class="badge bg-info" style="font-size: .8em;">7As</span></li>
+                                  <li>SPM / O Level / IGCSE <span class="badge bg-info" style="font-size: .8em;">9As</span></li>
+                              </ul>
+
+                              <h2>课程</h2>
+                              <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                  <div class="card" style="background-color: #ecd8e9;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Foundation</h5>
+                                      <div class="card-text pt-3 text-center">学费减免高达<h4>RM 6,000</h4><h2><span class="badge bg-info">平均85%</span></h2></div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col">
+                                  <div class="card" style="background-color: #ecd8e9;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Diploma</h5>
+                                      <div class="card-text pt-3 text-center">学费减免高达<h4>RM 15,000</h4><h2><span class="badge bg-info">平均85%</span></h2></div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col">
+                                  <div class="card" style="background-color: #ecd8e9;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Degree</h5>
+                                      <div class="card-text pt-3 text-center">学费减免高达<h4>RM 30,000</h4><h2><span class="badge bg-info">平均85%</span></h2></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading06">
+                    <button class="accordion-button collapsed text-white" style="background-color: #9873b9;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse06" aria-expanded="false" aria-controls="flush-collapse06">
+                      <b>体育生</b>
+                    </button>
+                  </h2>
+                  <div id="flush-collapse06" class="accordion-collapse collapse" aria-labelledby="flush-heading06" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-4 p-3"><img src="Photo/DSC00963 copy (1).jpg" width="100%"></div>
+                            <div class="col-md-8 p-3">
+                              <h2>申请资格</h2>
+                              <p>所有体育项目的国家/州代表(需符合课程入学资格)</p>
+
+                              <h2>课程</h2>
+                              <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                  <div class="card" style="background-color: #ecd8e9;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Foundation</h5>
+                                      <div class="card-text pt-3 text-center">学费减免高达<h4>RM 6,000</h4><h2><span class="badge bg-info">平均85%</span></h2></div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col">
+                                  <div class="card" style="background-color: #ecd8e9;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Diploma</h5>
+                                      <div class="card-text pt-3 text-center">学费减免高达<h4>RM 15,000</h4><h2><span class="badge bg-info">平均85%</span></h2></div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col">
+                                  <div class="card" style="background-color: #ecd8e9;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Degree</h5>
+                                      <div class="card-text pt-3 text-center">学费减免高达<h4>RM 30,000</h4><h2><span class="badge bg-info">平均85%</span></h2></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+                
+            </div>
+
+          </div>
+
+          <div class="container-fluid p-5">
+            <h1 id="scrollspyHeading3" class="pb-5 text-center">联系我们</h1>
+            <div class="row">
+              <div class="col-sm-6 p-3">
+                <div class="container p-5 bg-secondary text-white" style="height: 700px;">
+                  <h4 class="pb-3">联系服务</h4>
+                  <h5>WhatsApp</h5>
+                    <p><span class="bi-whatsapp"></span> 016-608 8378 (Alex 老师)</p>
+                    <p><span class="bi-whatsapp"></span> 016-608 8378 (婉X 老师)</p>
+                    <p><span class="bi-whatsapp"></span> 016-608 8378 (Alex 老师)</p>
+                    <p><span class="bi-whatsapp"></span> 016-608 8378 (Alex 老师)</p>
+                  <h5 class="pt-3">电子邮件</h5>
+                    <p><span class="bi-envelope-fill"></span> fictdeanoffice@newera.edu.my</p>
+                  <h5 class="pt-3">本校网址</h5>
+                    <p><span class="bi-globe"></span> www.newera.edu.my</p>
+                    <p><span class="bi-globe"></span> www.newera.edu.my/ict.php</p>
+                  <h4 class="pt-4">校址</h4>
+                    <P>Blok C, Lot 5, Seksyen 10, Jalan Bukit, 43000 Kajang, Selangor.</P>
+                </div>
+              </div>
+
+                <div class="col-sm-6 p-3">
+                    <div class="container p-5 bg-secondary text-white" style="height: 700px;">
+                        <form class="g-5">
+                
+                            <div class="mb-3">  
+                                <label for="name">姓名</label>
+                                <input id="name" type="text" class="form-control" placeholder="填写您的姓名">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="contact">联络号码</label>
+                                <input id="contact" type="text" class="form-control" placeholder="填写您的电话号码">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email">电子邮件</label>
+                                <input id="email" type="text" class="form-control" placeholder="填写您的电子邮件">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="qualification">学籍</label>
+                                <select id="qualification" class="form-select" >
+                                    <option selected>请选择您的现有学籍</option>
+                                    <option>SPM</option>
+                                    <option>STPM</option>
+                                    <option>UEC</option>
+                                    <option>IGCSE</option>
+                                    <option>Others</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="progammes">课程</label>
+                              <select id="progammes" class="form-select" >
+                                  <option selected>选择您感兴趣的课程</option>
+                                  <option>软件工程(荣誉)学士课程</option>
+                                  <option>资讯工艺(数码保安)荣誉学士课程</option>
+                                  <option>电子商务专业文凭课程</option>
+                                  <option>网站研发科技专业文凭课程</option>
+                                  <option>电脑科学专业文凭课程</option>
+                              </select>
+                          </div>
+            
+                            <div class="mb-3">
+                                <label for="question">提问</label>
+                                <textarea id="question" class="form-control" rows="3"></textarea>
+                            </div>
+            
+                            <div class="mb-3 text-center d-grid gap-2 col-2 mx-auto">
+                                <input type="submit" class="btn btn-primary" value="Send" onclick="AddRow()">
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </div>    
+
+    </body>
+</html>
